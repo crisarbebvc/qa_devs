@@ -1,0 +1,14 @@
+{
+    "name": "frontend",
+    "version": "1.0.0",
+    "description": "PoC de pruebas frontend con Jest",
+    "main": "index.js",
+    "scripts": {
+      "test": "jest"
+    },
+    "devDependencies": {
+      "jest": "^29.0.0"
+    },
+    "type": "module"
+  }
+  

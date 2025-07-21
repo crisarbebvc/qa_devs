@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Developer Ranking Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h2>Developer Test Results</h2>
+  <canvas id="resultsChart" width="400" height="200"></canvas>
+  <script>
+    fetch('../results/unified_summary.json')
+      .then(response => response.json())
+      .then(data => {
+        const labels = data.map(entry => entry.language);
+        const tests = data.map(entry => entry.tests);
+        const failures = data.map(entry => entry.failures);
+
+        new Chart(document.getElementById('resultsChart'), {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [
+              { label: 'Tests', data: tests, backgroundColor: 'green' },
+              { label: 'Failures', data: failures, backgroundColor: 'red' }
+            ]
+          },
+          options: { responsive: true }
+        });
+      });
+  </script>
+</body>
+</html>

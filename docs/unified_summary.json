@@ -1,0 +1,20 @@
+[
+  {
+    "developer": "alice",
+    "coverage": 92.5,
+    "tests_run": 120,
+    "failures": 1
+  },
+  {
+    "developer": "bob",
+    "coverage": 87.3,
+    "tests_run": 100,
+    "failures": 3
+  },
+  {
+    "developer": "carol",
+    "coverage": 95.1,
+    "tests_run": 140,
+    "failures": 0
+  }
+]
